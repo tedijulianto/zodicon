@@ -1,0 +1,459 @@
+body {
+  background: radial-gradient(#111, #000);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+.main {
+  opacity: 0;
+  display: none;
+  transition: opacity 2s ease;
+}
+
+.textTitle {
+  position: absolute;
+  top: 36%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  letter-spacing: 0.3em;
+  animation: animateText 2s ease;
+}
+
+@keyframes animateText {
+  0% {
+    top: 0px;
+    opacity: 0;
+  }
+  50% {
+    top: 40%;
+    opacity: 0.8;
+  }
+  100% {
+    top: 36%;
+    opacity: 1;
+  }
+}
+
+h2 {
+  position: relative;
+  margin: 0;
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 8em;
+  line-height: 0.8;
+  text-transform: uppercase;
+  color: transparent;
+  background: linear-gradient(
+    to bottom,
+    #222 0%,
+    #222 50%,
+    #111 50%,
+    #111 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+/* h5 {
+  position: absolute;
+  bottom: 140px;
+  color: white;
+} */
+
+.light {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 315px;
+  z-index: -10;
+  animation-name: lightshot;
+  animation-duration: 20s;
+}
+
+@keyframes lightshot {
+  0% {
+    opacity: 0;
+  }
+}
+
+.stage {
+  position: absolute;
+  top: 65.5%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 370px;
+  z-index: -10;
+}
+
+.imageShowcase {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 550px;
+  z-index: -10;
+  animation: showcase 1s ease;
+}
+
+@keyframes showcase {
+  0% {
+    top: 60%;
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    top: 45%;
+    opacity: 1;
+  }
+}
+
+.coming::before {
+  content: attr(data-coming);
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  z-index: -1;
+  background: linear-gradient(45deg, #fc642d, #00aeef, #662d91);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.soon::before {
+  content: attr(data-soon);
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  z-index: -1;
+  background: linear-gradient(45deg, #fc642d, #00aeef, #662d91);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+/* .coming::after {
+  content: attr(data-coming);
+  position: absolute;
+  top: 30px;
+  left: 20px;
+  z-index: -1;
+  background: linear-gradient(45deg, #fc642d, #00aeef, #662d91);
+  -webkit-background-clip: text;
+  background-clip: text;
+  filter: blur(20px);
+}
+
+.soon::after {
+  content: attr(data-soon);
+  position: absolute;
+  top: 30px;
+  left: 20px;
+  z-index: -1;
+  background: linear-gradient(45deg, #fc642d, #00aeef, #662d91);
+  -webkit-background-clip: text;
+  background-clip: text;
+  filter: blur(20px);
+} */
+
+.cardParent {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(4, 50px);
+  gap: 1rem;
+  /* position: absolute; */
+  bottom: 20px;
+  padding: 1rem;
+  background: #000;
+}
+
+.borderGradient {
+  position: absolute;
+  background: linear-gradient(to right, #fc642d, #00aeef, #662d91);
+  padding: 1rem;
+  padding: 3px;
+  bottom: 1rem;
+  text-align: center;
+}
+
+.cardContent {
+  background: #bdbdbd;
+  padding: 5px;
+  width: 50px;
+  height: 50px;
+  position: relative;
+  display: block;
+  -webkit-transform: translate(0);
+  transform: translate(0);
+  -webkit-transition: all 0.15s ease;
+  transition: all 0.15s ease;
+  z-index: 10;
+}
+
+.cardContent svg {
+  position: relative;
+  z-index: 2;
+  -webkit-transition: all 0.15s ease;
+  transition: all 0.15s ease;
+}
+
+.cardBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: rgb(255, 255, 255);
+  z-index: 1;
+  -webkit-transition: all 0.15s ease;
+  transition: all 0.15s ease;
+}
+
+.cardContent::before {
+  top: 0;
+  left: 0;
+  -webkit-transform-origin: top left;
+  transform-origin: top left;
+  -webkit-transform: rotate(-45deg) scale(0);
+  transform: rotate(-45deg) scale(0);
+  content: "";
+  display: block;
+  background-color: #bdbdbd;
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  -webkit-transition: all 0.15s ease;
+  transition: all 0.15s ease;
+}
+
+.cardContent::after {
+  right: 0;
+  bottom: 0;
+  -webkit-transform-origin: bottom right;
+  transform-origin: bottom right;
+  -webkit-transform: rotate(45deg) scale(0);
+  transform: rotate(45deg) scale(0);
+  content: "";
+  display: block;
+  background-color: #bdbdbd;
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  -webkit-transition: all 0.15s ease;
+  transition: all 0.15s ease;
+}
+
+.cardContent:hover::before {
+  -webkit-transform: rotate(-45deg) scale(1);
+  transform: rotate(-45deg) scale(1);
+}
+
+.cardContent:hover::after {
+  -webkit-transform: rotate(45deg) scale(1);
+  transform: rotate(45deg) scale(1);
+}
+
+.cardContent:hover .cardBg,
+.cardContent:hover svg {
+  -webkit-transform: translate(6px, -6px);
+  transform: translate(6px, -6px);
+}
+
+/* .pointer {
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  background: rgb(255, 0, 0);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  pointer-events: none;
+  transition: 0.1s;
+} */
+
+.patternTop {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.item {
+  width: 50px;
+  height: 50px;
+}
+
+.patternTop .item1 {
+  background: #fc642d;
+}
+
+.patternTop .item2 {
+  background: #00aeef;
+}
+
+.patternTop .item4 {
+  background: #662d91;
+}
+
+.patternBottom {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.patternBottom .item6 {
+  background: #fc642d;
+}
+
+.patternBottom .item3 {
+  background: #00aeef;
+}
+
+.patternBottom .item5 {
+  background: #662d91;
+}
+
+@media screen and (min-width: 360px) and (max-width: 575.98px) {
+  h2 {
+    font-size: 5em;
+  }
+
+  .textTitle {
+    top: 40%;
+    animation: animateText-sm 2s ease;
+  }
+
+  @keyframes animateText-sm {
+    0% {
+      top: 0px;
+      opacity: 0;
+    }
+    50% {
+      top: 42%;
+      opacity: 0.8;
+    }
+    100% {
+      top: 40%;
+      opacity: 1;
+    }
+  }
+
+  .light {
+    width: 260px;
+  }
+
+  .stage {
+    top: 62.5%;
+    width: 300px;
+  }
+
+  .imageShowcase {
+    width: 450px;
+  }
+
+  /* .patternTop {
+    display: none;
+    left: 50%;
+    transform: translate(-50%);
+  }
+
+  .patternTop .item3 {
+    background: #662d91;
+  }
+
+  .patternTop .item4 {
+    opacity: 0;
+  } */
+
+  .patternBottom {
+    /* display: none; */
+    position: static;
+    justify-content: end;
+  }
+
+  .patternBottom .item2 {
+    background: #00aeef;
+  }
+
+  .patternBottom .item3 {
+    background: #fc642d;
+  }
+
+  .patternBottom .item5 {
+    opacity: 0;
+  }
+
+  .patternBottom .item6 {
+    background: #662d91;
+  }
+
+  .item {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/*  begin bounce css */
+
+.dot {
+  /* margin: 100px auto 0;
+  width: 70px;
+  text-align: center; */
+  background: radial-gradient(#111, #000) !important;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  /* left: 0;
+  top: 0; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dot > div {
+  width: 18px;
+  height: 18px;
+  margin: 0 5px;
+  border-radius: 100%;
+  display: inline-block;
+  animation: dotDelay 1.4s infinite ease-in-out both;
+}
+
+.dot .dot1 {
+  animation-delay: -0.32s;
+}
+
+.dot .dot2 {
+  animation-delay: -0.16s;
+}
+
+@keyframes dotDelay {
+  0%,
+  80%,
+  100% {
+    transform: scale(0);
+  }
+  40% {
+    transform: scale(1);
+  }
+}
