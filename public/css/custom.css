@@ -1,6 +1,6 @@
-body {
+/* body {
   background: radial-gradient(#111, #000);
-}
+} */
 
 h1,
 h2,
@@ -17,7 +17,216 @@ h6 {
   transition: opacity 2s ease;
 }
 
-.textTitle {
+.bg-hero {
+  background-image: url("../images/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+.imgTitle {
+  position: absolute;
+  top: 18%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  animation: animateTitle 2s ease-in-out;
+}
+
+@keyframes animateTitle {
+  from {
+    top: 0%;
+    opacity: 0;
+  }
+  to {
+    top: 18%;
+    opacity: 1;
+  }
+}
+
+.sosmed {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(4, auto);
+  gap: 20px;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.sosmed a {
+  width: 43px;
+  height: 43px;
+  border: 2px solid white;
+  border-radius: 50%;
+  position: relative;
+}
+
+.sosmed a:hover {
+  background-color: #de5a41;
+  box-shadow: 0px 0px 25px #de5a41;
+}
+
+.sosmed a:nth-child(1) {
+  animation: animateIcon1 1s ease-out;
+  animation-delay: 1.5s;
+  opacity: 0;
+}
+.sosmed a:nth-child(2) {
+  animation: animateIcon1 1s ease-out;
+  animation-delay: 1s;
+  opacity: 0;
+}
+.sosmed a:nth-child(3) {
+  animation: animateIcon2 1s ease-out;
+  animation-delay: 1s;
+  opacity: 0;
+}
+.sosmed a:nth-child(4) {
+  animation: animateIcon2 1s ease-out;
+  animation-delay: 1.5s;
+  opacity: 0;
+}
+
+@keyframes animateIcon1 {
+  from {
+    left: -80px;
+    opacity: 0;
+  }
+  to {
+    left: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes animateIcon2 {
+  from {
+    left: 80px;
+    opacity: 0;
+  }
+  to {
+    left: 0;
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .imgTitle {
+    width: 325px;
+  }
+
+  .sosmed a svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+@media screen and (min-width: 400px) {
+  .imgTitle {
+    width: 375px;
+  }
+
+  .sosmed a {
+    width: 50px;
+    height: 50px;
+  }
+
+  .sosmed a svg {
+    width: 26px;
+    height: 26px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .imgTitle {
+    top: 18%;
+    width: 560px;
+  }
+
+  .sosmed {
+    top: 26%;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .imgTitle {
+    top: 19%;
+    width: 600px;
+    animation: animateTitle 2s ease-in-out;
+  }
+
+  @keyframes animateTitle {
+    from {
+      top: 0%;
+      opacity: 0;
+    }
+    to {
+      top: 19%;
+      opacity: 1;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .imgTitle {
+    top: 21%;
+    width: 722px;
+    animation: animateTitle 2s ease-in-out;
+  }
+
+  @keyframes animateTitle {
+    from {
+      top: 0%;
+      opacity: 0;
+    }
+    to {
+      top: 21%;
+      opacity: 1;
+    }
+  }
+
+  .sosmed {
+    top: 31%;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .imgTitle {
+    top: 18%;
+    width: 750px;
+    animation: animateTitle 2s ease-in-out;
+  }
+
+  @keyframes animateTitle {
+    from {
+      top: 0%;
+      opacity: 0;
+    }
+    to {
+      top: 18%;
+      opacity: 1;
+    }
+  }
+
+  .sosmed {
+    top: 29%;
+  }
+
+  .sosmed a {
+    width: 55px;
+    height: 55px;
+  }
+
+  .sosmed a svg {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+/* .textTitle {
   position: absolute;
   top: 36%;
   left: 50%;
@@ -61,11 +270,11 @@ h2 {
   background-clip: text;
 }
 
-/* h5 {
+h5 {
   position: absolute;
   bottom: 140px;
   color: white;
-} */
+}
 
 .light {
   position: absolute;
@@ -93,9 +302,9 @@ h2 {
   transform: translate(-50%, -50%);
   width: 370px;
   z-index: -10;
-}
+} */
 
-.imageShowcase {
+/* .imageShowcase {
   position: absolute;
   top: 45%;
   left: 50%;
@@ -121,9 +330,9 @@ h2 {
     top: 45%;
     opacity: 1;
   }
-}
+} */
 
-.coming::before {
+/* .coming::before {
   content: attr(data-coming);
   position: absolute;
   top: 4px;
@@ -145,7 +354,7 @@ h2 {
   background-clip: text;
 }
 
-/* .coming::after {
+.coming::after {
   content: attr(data-coming);
   position: absolute;
   top: 30px;
@@ -167,14 +376,14 @@ h2 {
   -webkit-background-clip: text;
   background-clip: text;
   filter: blur(20px);
-} */
+}
 
 .cardParent {
   display: grid;
   justify-content: center;
-  grid-template-columns: repeat(4, 50px);
+  grid-template-columns: repeat(4, auto);
   gap: 1rem;
-  /* position: absolute; */
+  position: absolute;
   bottom: 20px;
   padding: 1rem;
   background: #000;
@@ -271,7 +480,7 @@ h2 {
 .cardContent:hover svg {
   -webkit-transform: translate(6px, -6px);
   transform: translate(6px, -6px);
-}
+} */
 
 /* .pointer {
   position: fixed;
@@ -288,7 +497,7 @@ h2 {
   transition: 0.1s;
 } */
 
-.patternTop {
+/* .patternTop {
   display: grid;
   grid-template-columns: repeat(3, auto);
   position: absolute;
@@ -331,103 +540,21 @@ h2 {
 
 .patternBottom .item5 {
   background: #662d91;
-}
-
-@media screen and (min-width: 360px) and (max-width: 575.98px) {
-  h2 {
-    font-size: 5em;
-  }
-
-  .textTitle {
-    top: 40%;
-    animation: animateText-sm 2s ease;
-  }
-
-  @keyframes animateText-sm {
-    0% {
-      top: 0px;
-      opacity: 0;
-    }
-    50% {
-      top: 42%;
-      opacity: 0.8;
-    }
-    100% {
-      top: 40%;
-      opacity: 1;
-    }
-  }
-
-  .light {
-    width: 260px;
-  }
-
-  .stage {
-    top: 62.5%;
-    width: 300px;
-  }
-
-  .imageShowcase {
-    width: 450px;
-  }
-
-  /* .patternTop {
-    display: none;
-    left: 50%;
-    transform: translate(-50%);
-  }
-
-  .patternTop .item3 {
-    background: #662d91;
-  }
-
-  .patternTop .item4 {
-    opacity: 0;
-  } */
-
-  .patternBottom {
-    /* display: none; */
-    position: static;
-    justify-content: end;
-  }
-
-  .patternBottom .item2 {
-    background: #00aeef;
-  }
-
-  .patternBottom .item3 {
-    background: #fc642d;
-  }
-
-  .patternBottom .item5 {
-    opacity: 0;
-  }
-
-  .patternBottom .item6 {
-    background: #662d91;
-  }
-
-  .item {
-    width: 40px;
-    height: 40px;
-  }
-}
-
-/*  begin bounce css */
+} */
 
 .dot {
-  /* margin: 100px auto 0;
-  width: 70px;
-  text-align: center; */
-  background: radial-gradient(#111, #000) !important;
+  background: radial-gradient(#fff, #ddd) !important;
   height: 100%;
   width: 100%;
   position: fixed;
-  /* left: 0;
-  top: 0; */
   display: flex;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 .dot > div {
@@ -457,3 +584,179 @@ h2 {
     transform: scale(1);
   }
 }
+
+/* @media screen and (min-width: 360px) and (max-width: 399.98px) {
+  h2 {
+    font-size: 4em;
+  }
+
+  .textTitle {
+    top: 40%;
+    animation: animateText-xs 2s ease;
+  }
+
+  @keyframes animateText-xs {
+    0% {
+      top: 0px;
+      opacity: 0;
+    }
+    50% {
+      top: 43%;
+      opacity: 0.8;
+    }
+    100% {
+      top: 40%;
+      opacity: 1;
+    }
+  }
+
+  .light {
+    width: 260px;
+    top: 47%;
+  }
+
+  .stage {
+    top: 62.5%;
+    width: 300px;
+  }
+
+  .imageShowcase {
+    width: 450px;
+  }
+
+  .patternTop {
+    display: none;
+    left: 50%;
+    transform: translate(-50%);
+  }
+
+  .patternTop .item3 {
+    background: #662d91;
+  }
+
+  .patternTop .item4 {
+    opacity: 0;
+  }
+
+  .patternBottom {
+    display: none;
+    position: static;
+    justify-content: end;
+  }
+
+  .patternBottom .item2 {
+    background: #00aeef;
+  }
+
+  .patternBottom .item3 {
+    background: #fc642d;
+  }
+
+  .patternBottom .item5 {
+    opacity: 0;
+  }
+
+  .patternBottom .item6 {
+    background: #662d91;
+  }
+
+  .item {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media screen and (min-width: 400px) and (max-width: 575.98px) {
+  h2 {
+    font-size: 5em;
+  }
+
+  .textTitle {
+    top: 41%;
+    animation: animateText-sm 2s ease;
+  }
+
+  @keyframes animateText-sm {
+    0% {
+      top: 0px;
+      opacity: 0;
+    }
+    50% {
+      top: 44%;
+      opacity: 0.8;
+    }
+    100% {
+      top: 41%;
+      opacity: 1;
+    }
+  }
+
+  .light {
+    width: 260px;
+    top: 47%;
+  }
+
+  .stage {
+    top: 62.5%;
+    width: 300px;
+  }
+
+  .patternBottom {
+    display: none;
+    position: static;
+    justify-content: end;
+  }
+
+  .patternBottom .item2 {
+    background: #00aeef;
+  }
+
+  .patternBottom .item3 {
+    background: #fc642d;
+  }
+
+  .patternBottom .item5 {
+    opacity: 0;
+  }
+
+  .patternBottom .item6 {
+    background: #662d91;
+  }
+
+  .item {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+  .textTitle {
+    top: 42%;
+    animation: animateText-md 2s ease;
+  }
+
+  @keyframes animateText-md {
+    0% {
+      top: 0;
+      opacity: 0;
+    }
+    50% {
+      top: 45%;
+      opacity: 0.5;
+    }
+    100% {
+      top: 42%;
+      opacity: 1;
+    }
+  }
+
+  .light {
+    width: 345px;
+    top: 50%;
+  }
+
+  .stage {
+    top: 62.5%;
+    width: 400px;
+  }
+} */
