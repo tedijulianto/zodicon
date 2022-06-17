@@ -273,28 +273,16 @@
     const sosmed = document.querySelectorAll('.sosmedIcon');
     const sosmedChild = document.querySelector(".sosmed").children;
     
-    function init() {
+    function opacityTransition() {
       setTimeout(() => {
         loader.style.opacity = 0;
         loader.style.display = 'none';
 
         main.style.display = 'block';
         setTimeout(() => main.style.opacity = 1, 50);
-
-        // for (let i = 0; i < sosmed.length; i++) {
-        //   sosmed[i].style.display='block';
-        //   sosmed[i].style.animation = "animateIcon1 2s ease";
-        //   setTimeout(()=> sosmed[i].style.opacity = 1, 4000);
-        // }
-
-        setTimeout(() => sosmedChild[0].style.opacity = 1, 1600);
-        setTimeout(() => sosmedChild[1].style.opacity = 1, 1100);
-        setTimeout(() => sosmedChild[2].style.opacity = 1, 1100);
-        setTimeout(() => sosmedChild[3].style.opacity = 1, 1600);
       }, 2000);
     }
-    init();
-
+    opacityTransition();
   </script>
 
 </body>

@@ -71,22 +71,22 @@ h6 {
 }
 
 .sosmed a:nth-child(1) {
-  animation: animateIcon1 1s ease-out;
+  animation: animateIcon1 1s ease-out forwards;
   animation-delay: 1.5s;
   opacity: 0;
 }
 .sosmed a:nth-child(2) {
-  animation: animateIcon1 1s ease-out;
+  animation: animateIcon1 1s ease-out forwards;
   animation-delay: 1s;
   opacity: 0;
 }
 .sosmed a:nth-child(3) {
-  animation: animateIcon2 1s ease-out;
+  animation: animateIcon2 1s ease-out forwards;
   animation-delay: 1s;
   opacity: 0;
 }
 .sosmed a:nth-child(4) {
-  animation: animateIcon2 1s ease-out;
+  animation: animateIcon2 1s ease-out forwards;
   animation-delay: 1.5s;
   opacity: 0;
 }
@@ -550,11 +550,11 @@ h5 {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
+  /* position: absolute;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); */
 }
 
 .dot > div {
