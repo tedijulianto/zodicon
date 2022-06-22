@@ -18,7 +18,7 @@
 </head>
 
 <body>
-  <div class="pointer"></div>
+  {{-- <div class="pointer"></div> --}}
 
   <div class="dot">
     <div class="dot1" style="background: #fc642d"></div>
