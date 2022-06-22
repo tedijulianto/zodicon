@@ -1,8 +1,8 @@
-// let pointer = document.querySelector(".pointer");
-// document.addEventListener("mousemove", function (e) {
-//   pointer.style.cssText =
-//     "left: " + e.clientX + "px; top: " + e.clientY + "px;";
-// });
+let pointer = document.querySelector(".pointer");
+document.addEventListener("mousemove", function (e) {
+  pointer.style.cssText =
+    "left: " + e.clientX + "px; top: " + e.clientY + "px;";
+});
 
 // VanillaTilt.init(document.querySelector(".title"), {
 //   max: 25,

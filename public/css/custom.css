@@ -482,7 +482,7 @@ h5 {
   transform: translate(6px, -6px);
 } */
 
-/* .pointer {
+.pointer {
   position: fixed;
   z-index: 99;
   top: 0;
@@ -495,7 +495,7 @@ h5 {
   border-radius: 50%;
   pointer-events: none;
   transition: 0.1s;
-} */
+}
 
 /* .patternTop {
   display: grid;
